@@ -1,6 +1,7 @@
 ---
 title: "R Notebook Day 2 Final Exercise"
 output: html_notebook
+knitr root.dir 
 ---
 
 This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
@@ -15,6 +16,7 @@ When you save the notebook, an HTML file containing the code and output will be 
 setwd("C:/Users/Andrew/Desktop/SDC_workshop_20170826/R_notebook_day2")
 
 getwd()
+
 ```
 In the above section we set the working directory to the correct folder. 
 
@@ -24,10 +26,12 @@ library("tidyverse", lib.loc="~/R/win-library/3.4")
 library("knitr", lib.loc="~/R/win-library/3.4")
 library("scales", lib.loc="~/R/win-library/3.4")
 
-gapminder<- read.csv (file = 'datasets/gapminder_backup.txt',
+gapminder<- read.csv (file = 'gapminder_backup.txt',
                             header = TRUE,
                             sep = '\t')
 ```
+This section of code loads the required libraries and dataset into R.
+
 
 ```{r}
 
