@@ -1,9 +1,12 @@
 ---
 title: "R Notebook Day 2 Final Exercise"
 output: html_notebook
-knitr root.dir 
+
 ---
 
+```{r setup}
+knitr::opts_knit$set(root.dir = 'C:/Users/Andrew/Desktop/SDC_workshop_20170826/R_notebook_day2/R_notebook_day2_exc')
+```
 This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
 
 Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
@@ -13,25 +16,23 @@ Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by press
 When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
 
 ```{r}
-setwd("C:/Users/Andrew/Desktop/SDC_workshop_20170826/R_notebook_day2")
-
-getwd()
-
-```
-In the above section we set the working directory to the correct folder. 
-
-```{r}
 library("readxl", lib.loc="~/R/win-library/3.4")
 library("tidyverse", lib.loc="~/R/win-library/3.4")
 library("knitr", lib.loc="~/R/win-library/3.4")
 library("scales", lib.loc="~/R/win-library/3.4")
+library("readr", lib.loc="~/R/win-library/3.4")
 
 gapminder<- read.csv (file = 'gapminder_backup.txt',
-                            header = TRUE,
-                            sep = '\t')
+                      header = TRUE,
+                      sep = '\t')
 ```
 This section of code loads the required libraries and dataset into R.
 
+
+```{r}
+summary(gapminder)
+```
+Summary statistics for gapminder dataset.
 
 ```{r}
 

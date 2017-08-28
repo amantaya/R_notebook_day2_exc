@@ -172,77 +172,66 @@ $(document).ready(function () {
 
 
 <!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxua25pdHI6Om9wdHNfa25pdCRzZXQocm9vdC5kaXIgPSAnQzovVXNlcnMvQW5kcmV3L0Rlc2t0b3AvU0RDX3dvcmtzaG9wXzIwMTcwODI2L1Jfbm90ZWJvb2tfZGF5Mi9SX25vdGVib29rX2RheTJfZXhjJylcbmBgYCJ9 -->
+<pre class="r"><code>knitr::opts_knit$set(root.dir = 'C:/Users/Andrew/Desktop/SDC_workshop_20170826/R_notebook_day2/R_notebook_day2_exc')</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 <p>This is an <a href="http://rmarkdown.rstudio.com">R Markdown</a> Notebook. When you execute code within the notebook, the results appear beneath the code.</p>
 <p>Try executing this chunk by clicking the <em>Run</em> button within the chunk or by placing your cursor inside it and pressing <em>Ctrl+Shift+Enter</em>.</p>
 <p>Add a new chunk by clicking the <em>Insert Chunk</em> button on the toolbar or by pressing <em>Ctrl+Alt+I</em>.</p>
 <p>When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the <em>Preview</em> button or press <em>Ctrl+Shift+K</em> to preview the HTML file).</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2V0d2QoXCJDOi9Vc2Vycy9BbmRyZXcvRGVza3RvcC9TRENfd29ya3Nob3BfMjAxNzA4MjYvUl9ub3RlYm9va19kYXkyXCIpXG5gYGAifQ== -->
-<pre class="r"><code>setwd(&quot;C:/Users/Andrew/Desktop/SDC_workshop_20170826/R_notebook_day2&quot;)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2FwbWluZGVyIDwtIHJlYWRfZGVsaW0oXCJDOi9Vc2Vycy9BbmRyZXcvRGVza3RvcC9TRENfd29ya3Nob3BfMjAxNzA4MjYvUl9ub3RlYm9va19kYXkyL1Jfbm90ZWJvb2tfZGF5Ml9leGMvZ2FwbWluZGVyX2JhY2t1cC50eHRcIiwgXG4gICAgICAgICAgICAgICAgICAgICAgICBcIlxcdFwiLFxuICAgICAgICAgICAgICAgICAgICAgICAgZXNjYXBlX2RvdWJsZSA9IEZBTFNFLCBcbiAgICAgICAgICAgICAgICAgICAgICAgIHRyaW1fd3MgPSBUUlVFKVxuYGBgIn0= -->
+<pre class="r"><code>gapminder &lt;- read_delim(&quot;C:/Users/Andrew/Desktop/SDC_workshop_20170826/R_notebook_day2/R_notebook_day2_exc/gapminder_backup.txt&quot;, 
+                        &quot;\t&quot;,
+                        escape_double = FALSE, 
+                        trim_ws = TRUE)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiVGhlIHdvcmtpbmcgZGlyZWN0b3J5IHdhcyBjaGFuZ2VkIHRvIEM6L1VzZXJzL0FuZHJldy9EZXNrdG9wL1NEQ193b3Jrc2hvcF8yMDE3MDgyNi9SX25vdGVib29rX2RheTIgaW5zaWRlIGEgbm90ZWJvb2sgY2h1bmsuIFRoZSB3b3JraW5nIGRpcmVjdG9yeSB3aWxsIGJlIHJlc2V0IHdoZW4gdGhlIGNodW5rIGlzIGZpbmlzaGVkIHJ1bm5pbmcuIFVzZSB0aGUga25pdHIgcm9vdC5kaXIgb3B0aW9uIGluIHRoZSBzZXR1cCBjaHVuayB0byBjaGFuZ2UgdGhlIHRoZSB3b3JraW5nIGRpcmVjdG9yeSBmb3Igbm90ZWJvb2sgY2h1bmtzLlxuIn0= -->
-<pre><code>The working directory was changed to C:/Users/Andrew/Desktop/SDC_workshop_20170826/R_notebook_day2 inside a notebook chunk. The working directory will be reset when the chunk is finished running. Use the knitr root.dir option in the setup chunk to change the the working directory for notebook chunks.</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2V0d2QoKVxuYGBgIn0= -->
-<pre class="r"><code>getwd()</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiQzovVXNlcnMvQW5kcmV3L0Rlc2t0b3AvU0RDX3dvcmtzaG9wXzIwMTcwODI2L1Jfbm90ZWJvb2tfZGF5MlwiXG4ifQ== -->
-<pre><code>[1] &quot;C:/Users/Andrew/Desktop/SDC_workshop_20170826/R_notebook_day2&quot;</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoicmVzdGFydGluZyBpbnRlcnJ1cHRlZCBwcm9taXNlIGV2YWx1YXRpb25FcnJvciBpbiBkYXRlX25hbWVzX2xhbmcoZGF0ZV9uYW1lcykgOiBcbiAgY2Fubm90IG9wZW4gZmlsZSAnfi9SL3dpbi1saWJyYXJ5LzMuNC9yZWFkci9SL3N5c2RhdGEucmRiJzogTm8gc3VjaCBmaWxlIG9yIGRpcmVjdG9yeVxuIn0= -->
+<pre><code>restarting interrupted promise evaluationError in date_names_lang(date_names) : 
+  cannot open file '~/R/win-library/3.4/readr/R/sysdata.rdb': No such file or directory</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>In the above section we set the working directory to the correct folder.</p>
+<p>This section of code loads the required libraries and dataset into R.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShcInJlYWR4bFwiLCBsaWIubG9jPVwifi9SL3dpbi1saWJyYXJ5LzMuNFwiKVxubGlicmFyeShcInRpZHl2ZXJzZVwiLCBsaWIubG9jPVwifi9SL3dpbi1saWJyYXJ5LzMuNFwiKVxuYGBgIn0= -->
-<pre class="r"><code>library(&quot;readxl&quot;, lib.loc=&quot;~/R/win-library/3.4&quot;)
-library(&quot;tidyverse&quot;, lib.loc=&quot;~/R/win-library/3.4&quot;)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtbWFyeShnYXBtaW5kZXIpXG5cbmBgYCJ9 -->
+<pre class="r"><code>summary(gapminder)
+</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiTG9hZGluZyB0aWR5dmVyc2U6IGdncGxvdDJcbkxvYWRpbmcgdGlkeXZlcnNlOiB0aWJibGVcbkxvYWRpbmcgdGlkeXZlcnNlOiB0aWR5clxuTG9hZGluZyB0aWR5dmVyc2U6IHJlYWRyXG5Mb2FkaW5nIHRpZHl2ZXJzZTogcHVycnJcbkxvYWRpbmcgdGlkeXZlcnNlOiBkcGx5clxuQ29uZmxpY3RzIHdpdGggdGlkeSBwYWNrYWdlcyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbmZpbHRlcigpOiBkcGx5ciwgc3RhdHNcbmxhZygpOiAgICBkcGx5ciwgc3RhdHNcbiJ9 -->
-<pre><code>Loading tidyverse: ggplot2
-Loading tidyverse: tibble
-Loading tidyverse: tidyr
-Loading tidyverse: readr
-Loading tidyverse: purrr
-Loading tidyverse: dplyr
-Conflicts with tidy packages ------------------------------------
-filter(): dplyr, stats
-lag():    dplyr, stats</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShcImtuaXRyXCIsIGxpYi5sb2M9XCJ+L1Ivd2luLWxpYnJhcnkvMy40XCIpXG5saWJyYXJ5KFwic2NhbGVzXCIsIGxpYi5sb2M9XCJ+L1Ivd2luLWxpYnJhcnkvMy40XCIpXG5gYGAifQ== -->
-<pre class="r"><code>library(&quot;knitr&quot;, lib.loc=&quot;~/R/win-library/3.4&quot;)
-library(&quot;scales&quot;, lib.loc=&quot;~/R/win-library/3.4&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTog46S847ixc2NhbGVz46S847iyXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0IGlzIG1hc2tlZCBmcm9tIOOkvOO4sXBhY2thZ2U6cHVycnLjpLzjuLI6XG5cbiAgICBkaXNjYXJkXG5cblRoZSBmb2xsb3dpbmcgb2JqZWN0IGlzIG1hc2tlZCBmcm9tIOOkvOO4sXBhY2thZ2U6cmVhZHLjpLzjuLI6XG5cbiAgICBjb2xfZmFjdG9yXG4ifQ== -->
-<pre><code>
-Attaching package: 㤼㸱scales㤼㸲
-
-The following object is masked from 㤼㸱package:purrr㤼㸲:
-
-    discard
-
-The following object is masked from 㤼㸱package:readr㤼㸲:
-
-    col_factor</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2FwbWluZGVyPC0gcmVhZC5jc3YgKGZpbGUgPSAnZGF0YXNldHMvZ2FwbWluZGVyX2JhY2t1cC50eHQnLFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIGhlYWRlciA9IFRSVUUsXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgc2VwID0gJ1xcdCcpXG5gYGAifQ== -->
-<pre class="r"><code>gapminder&lt;- read.csv (file = 'datasets/gapminder_backup.txt',
-                            header = TRUE,
-                            sep = '\t')</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiY2Fubm90IG9wZW4gZmlsZSAnZGF0YXNldHMvZ2FwbWluZGVyX2JhY2t1cC50eHQnOiBObyBzdWNoIGZpbGUgb3IgZGlyZWN0b3J5RXJyb3IgaW4gZmlsZShmaWxlLCBcInJ0XCIpIDogY2Fubm90IG9wZW4gdGhlIGNvbm5lY3Rpb25cbiJ9 -->
-<pre><code>cannot open file 'datasets/gapminder_backup.txt': No such file or directoryError in file(file, &quot;rt&quot;) : cannot open the connection</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICBjb3VudHJ5ICAgICAgICBjb250aW5lbnQgICAgICAgIHllYXIgICAgICAgICBsaWZlRXhwICAgICBcbiBBZmdoYW5pc3RhbjogIDEyICAgQWZyaWNhICA6NjI0ICAgTWluLiAgIDoxOTUyICAgTWluLiAgIDoyMy42MCAgXG4gQWxiYW5pYSAgICA6ICAxMiAgIEFtZXJpY2FzOjMwMCAgIDFzdCBRdS46MTk2NiAgIDFzdCBRdS46NDguMjAgIFxuIEFsZ2VyaWEgICAgOiAgMTIgICBBc2lhICAgIDozOTYgICBNZWRpYW4gOjE5ODAgICBNZWRpYW4gOjYwLjcxICBcbiBBbmdvbGEgICAgIDogIDEyICAgRXVyb3BlICA6MzYwICAgTWVhbiAgIDoxOTgwICAgTWVhbiAgIDo1OS40NyAgXG4gQXJnZW50aW5hICA6ICAxMiAgIE9jZWFuaWEgOiAyNCAgIDNyZCBRdS46MTk5MyAgIDNyZCBRdS46NzAuODUgIFxuIEF1c3RyYWxpYSAgOiAgMTIgICAgICAgICAgICAgICAgICBNYXguICAgOjIwMDcgICBNYXguICAgOjgyLjYwICBcbiAoT3RoZXIpICAgIDoxNjMyICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgXG4gICAgICBwb3AgICAgICAgICAgICAgIGdkcFBlcmNhcCAgICAgICBcbiBNaW4uICAgOjYuMDAxZSswNCAgIE1pbi4gICA6ICAgMjQxLjIgIFxuIDFzdCBRdS46Mi43OTRlKzA2ICAgMXN0IFF1LjogIDEyMDIuMSAgXG4gTWVkaWFuIDo3LjAyNGUrMDYgICBNZWRpYW4gOiAgMzUzMS44ICBcbiBNZWFuICAgOjIuOTYwZSswNyAgIE1lYW4gICA6ICA3MjE1LjMgIFxuIDNyZCBRdS46MS45NTllKzA3ICAgM3JkIFF1LjogIDkzMjUuNSAgXG4gTWF4LiAgIDoxLjMxOWUrMDkgICBNYXguICAgOjExMzUyMy4xICBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuIn0= -->
+<pre><code>        country        continent        year         lifeExp     
+ Afghanistan:  12   Africa  :624   Min.   :1952   Min.   :23.60  
+ Albania    :  12   Americas:300   1st Qu.:1966   1st Qu.:48.20  
+ Algeria    :  12   Asia    :396   Median :1980   Median :60.71  
+ Angola     :  12   Europe  :360   Mean   :1980   Mean   :59.47  
+ Argentina  :  12   Oceania : 24   3rd Qu.:1993   3rd Qu.:70.85  
+ Australia  :  12                  Max.   :2007   Max.   :82.60  
+ (Other)    :1632                                                
+      pop              gdpPercap       
+ Min.   :6.001e+04   Min.   :   241.2  
+ 1st Qu.:2.794e+06   1st Qu.:  1202.1  
+ Median :7.024e+06   Median :  3531.8  
+ Mean   :2.960e+07   Mean   :  7215.3  
+ 3rd Qu.:1.959e+07   3rd Qu.:  9325.5  
+ Max.   :1.319e+09   Max.   :113523.1  
+                                       </code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<p>Summary statistics for gapminder dataset.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2sgRGF5IDIgRmluYWwgRXhlcmNpc2UiDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpUaGlzIGlzIGFuIFtSIE1hcmtkb3duXShodHRwOi8vcm1hcmtkb3duLnJzdHVkaW8uY29tKSBOb3RlYm9vay4gV2hlbiB5b3UgZXhlY3V0ZSBjb2RlIHdpdGhpbiB0aGUgbm90ZWJvb2ssIHRoZSByZXN1bHRzIGFwcGVhciBiZW5lYXRoIHRoZSBjb2RlLiANCg0KVHJ5IGV4ZWN1dGluZyB0aGlzIGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqUnVuKiBidXR0b24gd2l0aGluIHRoZSBjaHVuayBvciBieSBwbGFjaW5nIHlvdXIgY3Vyc29yIGluc2lkZSBpdCBhbmQgcHJlc3NpbmcgKkN0cmwrU2hpZnQrRW50ZXIqLiANCg0KQWRkIGEgbmV3IGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqSW5zZXJ0IENodW5rKiBidXR0b24gb24gdGhlIHRvb2xiYXIgb3IgYnkgcHJlc3NpbmcgKkN0cmwrQWx0K0kqLg0KDQpXaGVuIHlvdSBzYXZlIHRoZSBub3RlYm9vaywgYW4gSFRNTCBmaWxlIGNvbnRhaW5pbmcgdGhlIGNvZGUgYW5kIG91dHB1dCB3aWxsIGJlIHNhdmVkIGFsb25nc2lkZSBpdCAoY2xpY2sgdGhlICpQcmV2aWV3KiBidXR0b24gb3IgcHJlc3MgKkN0cmwrU2hpZnQrSyogdG8gcHJldmlldyB0aGUgSFRNTCBmaWxlKS4NCg0KYGBge3J9DQpzZXR3ZCgiQzovVXNlcnMvQW5kcmV3L0Rlc2t0b3AvU0RDX3dvcmtzaG9wXzIwMTcwODI2L1Jfbm90ZWJvb2tfZGF5MiIpDQoNCmdldHdkKCkNCmBgYA0KSW4gdGhlIGFib3ZlIHNlY3Rpb24gd2Ugc2V0IHRoZSB3b3JraW5nIGRpcmVjdG9yeSB0byB0aGUgY29ycmVjdCBmb2xkZXIuIA0KDQpgYGB7cn0NCmxpYnJhcnkoInJlYWR4bCIsIGxpYi5sb2M9In4vUi93aW4tbGlicmFyeS8zLjQiKQ0KbGlicmFyeSgidGlkeXZlcnNlIiwgbGliLmxvYz0ifi9SL3dpbi1saWJyYXJ5LzMuNCIpDQpsaWJyYXJ5KCJrbml0ciIsIGxpYi5sb2M9In4vUi93aW4tbGlicmFyeS8zLjQiKQ0KbGlicmFyeSgic2NhbGVzIiwgbGliLmxvYz0ifi9SL3dpbi1saWJyYXJ5LzMuNCIpDQoNCmdhcG1pbmRlcjwtIHJlYWQuY3N2IChmaWxlID0gJ2RhdGFzZXRzL2dhcG1pbmRlcl9iYWNrdXAudHh0JywNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBoZWFkZXIgPSBUUlVFLA0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNlcCA9ICdcdCcpDQpgYGANCg0KYGBge3J9DQoNCmBgYA0KDQo=</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2sgRGF5IDIgRmluYWwgRXhlcmNpc2UiDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCg0KLS0tDQoNCmBgYHtyIHNldHVwfQ0Ka25pdHI6Om9wdHNfa25pdCRzZXQocm9vdC5kaXIgPSAnQzovVXNlcnMvQW5kcmV3L0Rlc2t0b3AvU0RDX3dvcmtzaG9wXzIwMTcwODI2L1Jfbm90ZWJvb2tfZGF5Mi9SX25vdGVib29rX2RheTJfZXhjJykNCmBgYA0KVGhpcyBpcyBhbiBbUiBNYXJrZG93bl0oaHR0cDovL3JtYXJrZG93bi5yc3R1ZGlvLmNvbSkgTm90ZWJvb2suIFdoZW4geW91IGV4ZWN1dGUgY29kZSB3aXRoaW4gdGhlIG5vdGVib29rLCB0aGUgcmVzdWx0cyBhcHBlYXIgYmVuZWF0aCB0aGUgY29kZS4gDQoNClRyeSBleGVjdXRpbmcgdGhpcyBjaHVuayBieSBjbGlja2luZyB0aGUgKlJ1biogYnV0dG9uIHdpdGhpbiB0aGUgY2h1bmsgb3IgYnkgcGxhY2luZyB5b3VyIGN1cnNvciBpbnNpZGUgaXQgYW5kIHByZXNzaW5nICpDdHJsK1NoaWZ0K0VudGVyKi4gDQoNCkFkZCBhIG5ldyBjaHVuayBieSBjbGlja2luZyB0aGUgKkluc2VydCBDaHVuayogYnV0dG9uIG9uIHRoZSB0b29sYmFyIG9yIGJ5IHByZXNzaW5nICpDdHJsK0FsdCtJKi4NCg0KV2hlbiB5b3Ugc2F2ZSB0aGUgbm90ZWJvb2ssIGFuIEhUTUwgZmlsZSBjb250YWluaW5nIHRoZSBjb2RlIGFuZCBvdXRwdXQgd2lsbCBiZSBzYXZlZCBhbG9uZ3NpZGUgaXQgKGNsaWNrIHRoZSAqUHJldmlldyogYnV0dG9uIG9yIHByZXNzICpDdHJsK1NoaWZ0K0sqIHRvIHByZXZpZXcgdGhlIEhUTUwgZmlsZSkuDQoNCmBgYHtyfQ0KbGlicmFyeSgicmVhZHhsIiwgbGliLmxvYz0ifi9SL3dpbi1saWJyYXJ5LzMuNCIpDQpsaWJyYXJ5KCJ0aWR5dmVyc2UiLCBsaWIubG9jPSJ+L1Ivd2luLWxpYnJhcnkvMy40IikNCmxpYnJhcnkoImtuaXRyIiwgbGliLmxvYz0ifi9SL3dpbi1saWJyYXJ5LzMuNCIpDQpsaWJyYXJ5KCJzY2FsZXMiLCBsaWIubG9jPSJ+L1Ivd2luLWxpYnJhcnkvMy40IikNCmxpYnJhcnkoInJlYWRyIiwgbGliLmxvYz0ifi9SL3dpbi1saWJyYXJ5LzMuNCIpDQoNCmdhcG1pbmRlcjwtIHJlYWQuY3N2IChmaWxlID0gJ2dhcG1pbmRlcl9iYWNrdXAudHh0JywNCiAgICAgICAgICAgICAgICAgICAgICBoZWFkZXIgPSBUUlVFLA0KICAgICAgICAgICAgICAgICAgICAgIHNlcCA9ICdcdCcpDQpgYGANClRoaXMgc2VjdGlvbiBvZiBjb2RlIGxvYWRzIHRoZSByZXF1aXJlZCBsaWJyYXJpZXMgYW5kIGRhdGFzZXQgaW50byBSLg0KDQoNCmBgYHtyfQ0Kc3VtbWFyeShnYXBtaW5kZXIpDQpgYGANClN1bW1hcnkgc3RhdGlzdGljcyBmb3IgZ2FwbWluZGVyIGRhdGFzZXQuDQoNCmBgYHtyfQ0KDQpgYGANCg0K</div>
 
 
 
